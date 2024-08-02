@@ -1,0 +1,128 @@
+{
+  "connectorName": "AI",
+  "operationName": "scan",
+  "title": "Scan a given image/document with AI",
+  "help": "<h1>Scan image/document with AI</h1> <b>Scan a given image/document with AI</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "description",
+              "displayName": "Description",
+              "inputType": "string",
+              "defaultValue": "Scan a given image/document with AI",
+              "required": "false",
+              "helpTip": "Give a description on the AI task"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "AI Engine",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "openAIKey",
+                    "displayName": "OpenAI API Key",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "xxxx-xxxx-xxxx-xxxx"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "openAIModel",
+                    "displayName": "OpenAI Model",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "gpt-4-turbo",
+                    "required": "false",
+                    "helpTip": "Define the AI Model"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "openAIEndpoint",
+                    "displayName": "OpenAI Endpoint",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "https://api.openai.com/v1/chat/completions",
+                    "required": "false",
+                    "helpTip": "Define the AI Endpoint"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "fileName",
+                    "displayName": "Filename",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Specify the name of the file with extension."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "FileContent",
+                    "displayName": "Content",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Give the content to be scanned."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "scannerOutputSchema",
+                    "displayName": "Output Schema",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Give the registry path of output schema"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Chat Options",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "maxTokens",
+                    "displayName": "Max Tokens",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "500",
+                    "required": "false",
+                    "helpTip": "The maximum number of tokens that can be generated in the chat completion."
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

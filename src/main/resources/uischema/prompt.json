@@ -1,0 +1,128 @@
+{
+  "connectorName": "AI",
+  "operationName": "prompt",
+  "title": "Execute a given prompt with AI",
+  "help": "<h1>Execute prompts with AI</h1> <b>Execute a given prompt with AI</b>",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "description",
+              "displayName": "Description",
+              "inputType": "string",
+              "defaultValue": "Execute a given prompt with AI",
+              "required": "false",
+              "helpTip": "Give a description on the AI task"
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "AI Engine",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "openAIKey",
+                    "displayName": "OpenAI API Key",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "xxxx-xxxx-xxxx-xxxx"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "openAIModel",
+                    "displayName": "OpenAI Model",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "gpt-3.5-turbo",
+                    "required": "false",
+                    "helpTip": "Define the AI Model"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "openAIEndpoint",
+                    "displayName": "OpenAI Endpoint",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "https://api.openai.com/v1/chat/completions",
+                    "required": "false",
+                    "helpTip": "Define the AI Endpoint"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Request Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "prompt",
+                    "displayName": "Prompt",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Specify the prompt to be executed."
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "headers",
+                    "displayName": "Headers",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "false",
+                    "helpTip": "Define any headers if needed to be passed"
+                  }
+                },
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "payload",
+                    "displayName": "Payload",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "",
+                    "required": "true",
+                    "helpTip": "Give any data if needed to execute the prompt"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "attributeGroup",
+            "value": {
+              "groupName": "Retry Parameters",
+              "elements": [
+                {
+                  "type": "attribute",
+                  "value": {
+                    "name": "retryCount",
+                    "displayName": "Retry Count",
+                    "inputType": "stringOrExpression",
+                    "defaultValue": "3",
+                    "required": "true",
+                    "helpTip": "Number of retries to be done."
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
